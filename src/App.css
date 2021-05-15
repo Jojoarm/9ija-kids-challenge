@@ -1,0 +1,272 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  font-family: "poppins", sans-serif;
+  text-align: center;
+}
+
+.games,
+.game__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.games {
+  height: 80%;
+  width: 100%;
+}
+
+.game__search {
+  height: 30vh;
+}
+
+.game__text {
+  font-size: 24px;
+}
+
+.game__container {
+  width: 50%;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 10px;
+  margin: 5px 0rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.312);
+  cursor: pointer;
+}
+
+.game__image {
+  width: 30%;
+  height: 100%;
+}
+
+.game__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 2px 2px 1rem rgba(253, 253, 253, 0.3);
+  border-radius: 5%;
+}
+
+.game__info {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.game__info h2 {
+  font-size: 16px;
+}
+
+.game__info p {
+  font-size: 14px;
+}
+
+.spinner {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input styling */
+.search__container {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 30px;
+  color: black;
+  background-color: #eef3f8;
+}
+
+.search__container input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 400px;
+}
+
+/* Select button styling */
+.label {
+  display: flex;
+  width: 550px;
+  height: 70px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.select__container {
+  display: flex;
+  height: 70px;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.select__container label {
+  padding-bottom: 5px;
+}
+
+.dropdown-container {
+  width: 250px;
+  /* margin: 10px auto; */
+  position: relative;
+}
+
+select {
+  width: 100%;
+  height: 50px;
+  font-size: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: DodgerBlue;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  appearance: none;
+  padding: 10px;
+  padding-right: 38px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-bottom-color 0.3s ease;
+}
+
+/* For IE <= 11 */
+select::-ms-expand {
+  display: none;
+}
+
+.select-icon {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  width: 30px;
+  height: 36px;
+  pointer-events: none;
+  border: 2px solid DodgerBlue;
+  padding-left: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.select-icon svg.icon {
+  transition: fill 0.3s ease;
+  fill: white;
+}
+
+select:hover {
+  color: DodgerBlue;
+  background-color: white;
+  border-bottom-color: #dcdcdc;
+}
+select:hover ~ .select-icon {
+  background-color: white;
+  border-color: white;
+}
+select:hover ~ .select-icon svg.icon {
+  fill: DodgerBlue;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    width: 100vw;
+  }
+
+  .game__search {
+    width: 90vw;
+    height: 18vh;
+    margin-bottom: 20px;
+  }
+
+  .game__text {
+    font-size: 18px;
+  }
+
+  .search__container {
+    width: 310px;
+    height: 30%;
+  }
+
+  .search__container input {
+    width: 280px;
+  }
+
+  .label {
+    display: flex;
+    width: 300px;
+  }
+
+  .dropdown-container {
+    width: 90px;
+    position: relative;
+  }
+
+  select {
+    width: 110px;
+    height: 50px;
+    padding: 10px;
+    padding-right: 0px;
+    font-size: 12px;
+  }
+
+  .select-icon {
+    width: 20px;
+    height: 26px;
+  }
+
+  .select__container label {
+    font-size: 10px;
+    font-weight: 400;
+    padding-bottom: 1px;
+  }
+
+  .game__container {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+  .game__image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .game__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+  }
+
+  .game__info {
+    display: flex;
+    width: 100%;
+    height: 60%;
+  }
+
+  .game__info h2 {
+    font-size: 14px;
+  }
+
+  .game__info p {
+    font-size: 12px;
+  }
+}
